@@ -6,28 +6,75 @@
     <meta name="viewport" content="width=750,user-scalable=no">
     <script src="lazysizes.min.js"></script>
     <style>
+        div {
+            position: relative;
+        }
+
         img {
             display: block;
             width: 750px;
             height: 320px;
         }
+
+        .wx1 span {
+            position: absolute;
+            bottom: 24px;
+            left: 150px;
+            font-size: 26px;
+            font-weight: 600;
+            color: #3c64fb;
+        }
+        .wx4 span {
+            position: absolute;
+            top: 200px;
+            left: 568px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .wx2 span {
+            position: absolute;
+            top: 114px;
+            left: 367px;
+            font-size: 29px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .wx3 span {
+            position: absolute;
+            top: 208px;
+            left: 323px;
+            font-size: 37px;
+            font-weight: 600;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
 <img data-src="images/imgmei_01.jpg" class=" lazyload">
-<img data-src="images/imgmei_02.jpg" class=" lazyload">
+<div class="wx1"><img data-src="images/imgmei_02.jpg" class=" lazyload"><span></span></div>
 <img data-src="images/imgmei_03.jpg" class=" lazyload">
 <img data-src="images/imgmei_04.jpg" class=" lazyload">
-<img data-src="images/imgmei_05.jpg" class=" lazyload">
+<div class="wx4"><img data-src="images/imgmei_05.jpg" class=" lazyload"><span></span></div>
 <img data-src="images/imgmei_06.jpg" class=" lazyload">
 <img data-src="images/imgmei_07.jpg" class=" lazyload">
 <img data-src="images/imgmei_08.jpg" class=" lazyload">
 <img data-src="images/imgmei_09.jpg" class=" lazyload">
 <img data-src="images/imgmei_10.jpg" class=" lazyload">
-<img data-src="images/imgmei_11.jpg" class=" lazyload">
+<div class="wx2"><img data-src="images/imgmei_11.jpg" class=" lazyload"><span></span></div>
 <img data-src="images/imgmei_12.jpg" class=" lazyload">
 <img data-src="images/imgmei_13.jpg" class=" lazyload">
 <img data-src="images/imgmei_14.jpg" class=" lazyload">
-<img data-src="images/imgmei_15.jpg" class=" lazyload">
+<div class="wx3"><img data-src="images/imgmei_15.jpg" class=" lazyload"><span></span></div>
 </body>
 </html>
+<script>
+    var phoneNum = ['18888888888', '16666666666'];
+    var randomNumber = Math.round(Math.random());
+    var phoneNumEle = document.getElementsByTagName("span");
+    phoneNumEle[0].innerHTML = phoneNum[randomNumber];
+    phoneNumEle[1].innerHTML = phoneNum[randomNumber];
+    phoneNumEle[2].innerHTML = phoneNum[randomNumber];
+    phoneNumEle[3].innerHTML = phoneNum[randomNumber];
+</script>
